@@ -6,7 +6,8 @@ int main() {
 	char jn;
 	
 	do{
-    int n1,n2, op;
+	int op;
+    float n1,n2;
     printf("===============================\n");
     printf("   Calculadora Simples         \n");
     printf("===============================\n");
@@ -19,7 +20,7 @@ int main() {
     printf("Opção: ");
     scanf("%d",&op);
     printf("\n");
-    if(op<0 || op>5){
+    if(op<=0 || op>5){
     	printf("Opção inválida");
     	continue;
 	}
@@ -28,22 +29,22 @@ int main() {
 	}else{
 		system("cls");
 		printf("Digite o primeiro número: ");
-		scanf("%d",&n1);
+		scanf("%f",&n1);
 		printf("\nDigite o segundo número: ");
-		scanf("%d",&n2);
+		scanf("%f",&n2);
 		printf("\n");
 		switch (op){
 			case 1: // soma
-				printf("Resultado: %d + %d = %d", n1, n2, n1+n2); break;
+				printf("Resultado: %f + %f = %.2f", n1, n2, n1+n2); break;
 			case 2: //subtração
-				printf("Resultado: %d - %d = %d", n1, n2, n1-n2); break;
+				printf("Resultado: %f - %f = %.2f", n1, n2, n1-n2); break;
 			case 3: //multiplicação
-				printf("Resultado: %d x %d = %d", n1, n2, n1*n2); break;
+				printf("Resultado: %f x %f = %.2f", n1, n2, n1*n2); break;
 			case 4: // divisão
 			if(n2==0)
 				printf("Erro: divisão por zero!\n");
 			else
-				printf("Resultado: %d/%d = %d", n1, n2, n1/n2); break;
+				printf("Resultado: %f/%f = %.2f", n1, n2, n1/n2); break;
 			default:
 				printf("Opção inválida!\n");
 				
