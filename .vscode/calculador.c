@@ -20,6 +20,10 @@ int main() {
     printf("Opção: ");
     scanf("%d",&op);
     printf("\n");
+    if(op<0 || op>5){
+    	printf("Opção inválida");
+    	continue;
+	}
     if(op==5){
     	break;
 	}else{
